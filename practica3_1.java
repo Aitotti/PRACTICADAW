@@ -60,6 +60,15 @@ public class practica3_1 {
                     break;
                 case 12:
                     System.out.println("Opcion Elegida: Cuenta número de palabras ");
+                    int numero=0;
+				    System.out.println("INTRODUZCA LA FRASE");
+				    String mensaje = sc.nextLine();//Si es un poco cutre pero no he encontrado otra forma
+				    mensaje = sc.nextLine();// de que no se salte la linea de codigo y no de errores;
+				    mensaje = mensaje.trim();
+				    mensaje = mensaje.replaceAll("\\s+", " ");
+				    String[] palabras = mensaje.split(" ");
+				    numero = palabras.length;
+				    System.out.println("NUMERO DE PALABRAS: " + numero);
                     break;
                 case 13:
                     System.out.println("Opcion Elegida: Salir, Adiós");
