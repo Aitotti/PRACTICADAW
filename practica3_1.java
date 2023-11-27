@@ -9,7 +9,11 @@ import java.util.Scanner;
 //8. Palindrono (Arnau)
 //9. Invierte mayúsculas y minúsculas (Ion Evangelista)
 //10. Codifica frase (Josep)
+
+//11. Invierte cada palabra (Nico)
+
 //11. Invierte cada palabra (Nicolas)
+
 //12. Cuenta número de palabras (Cristian)
 //13. Salir
 public class practica3_1 {
@@ -57,6 +61,35 @@ public class practica3_1 {
                     break;
                 case 11:
                     System.out.println("Opcion Elegida: Invertir cada palabra ");
+
+
+                    String[] palabras11 = frase.split(" ");
+
+                    int longitud11 = palabras11.length;
+                    String palabra_aux11 = "";
+
+                    for (int i = 0; i<longitud11; i++){
+                        int  longitudpalabra11 = palabras11[i].length();
+                        for (int j = 0; j<longitudpalabra11; j++){
+
+                            palabra_aux11 = palabra_aux11 + palabras11[i].charAt(longitudpalabra11-1-j);
+
+                        }
+
+                        palabras11[i] = palabra_aux11;
+                        palabra_aux11 = "";
+
+                    }
+                    frase = "";
+                    for (int k = 0; k<palabras11.length; k++){
+
+                        frase = frase +" " +palabras11[k];
+
+                    }
+
+                    System.out.println(frase);
+
+
                     break;
                 case 12:
                     System.out.println("Opcion Elegida: Cuenta número de palabras ");
